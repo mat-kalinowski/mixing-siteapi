@@ -15,5 +15,18 @@
     "jade": "^0.29.0",
     "morgan": "~1.9.1",
     "netlify-lambda": "^2.0.15"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mat-kalinowski/mixing-site-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mat-kalinowski/mixing-site-backend/issues"
+  },
+  "homepage": "https://github.com/mat-kalinowski/mixing-site-backend#readme",
+  "description": ""
 }
