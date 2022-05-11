@@ -16,7 +16,7 @@ artifacts:
   files:
     - app.js
     - bin/*
-    - public/*
-    - routes/*
-    - views/*
+    - public
+    - routes
+    - views
     - node_modules/**/*
