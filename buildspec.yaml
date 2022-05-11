@@ -17,6 +17,5 @@ artifacts:
     - app.js
     - bin/*
     - public/*/**
-    - routes/index.js
-    - routes/users.js
+    - routes/**
     - node_modules/**/*
