@@ -20,7 +20,7 @@ const signedUrlExpireSeconds = 60 * 5;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   const str = process.env.AWS_ACCESS_KEY_ID;
-  res.render('index', { title: `SAK: ${str}` });
+  res.render('index', { title: `ACCESS KEY: ${str}` });
 });
 
 router.post('/s3-url', function(req, res, next) {
