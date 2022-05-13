@@ -13,8 +13,7 @@ AWS.config.update({
 });
 
 const s3 = new AWS.S3()
-const myBucket = 'mixing-samples';
-const myKey = 'destination/key.jpg';
+const myBucket = 'stems-uploader';
 const signedUrlExpireSeconds = 60 * 5;
 
 /* GET home page. */
