@@ -19,7 +19,7 @@ const signedUrlExpireSeconds = 60 * 5;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  const str = process.env.SAK;
+  const str = process.env.AWS_ACCESS_KEY_ID;
   res.render('index', { title: `SAK: ${str}` });
 });
 
