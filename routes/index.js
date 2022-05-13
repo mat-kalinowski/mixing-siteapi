@@ -6,8 +6,8 @@ var router = express.Router();
 router.use(cors())
 
 AWS.config.update({ 
-  accessKeyId: 'aci',
-  secretAccessKey: 'sak',
+  accessKeyId: `${process.env.AWS_ACCESS_KEY_ID}`,
+  secretAccessKey: `${process.env.AWS_SECRET_ACCESS_KEY}`,
   region: 'eu-central-1',
   signatureVersion: 'v4'
 });
@@ -19,8 +19,7 @@ const signedUrlExpireSeconds = 60 * 5;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  const str = process.env.AWS_ACCESS_KEY_ID;
-  res.render('index', { title: `ACCESS KEY: ${str}` });
+  res.render('index', { title: `aws` });
 });
 
 router.post('/s3-url', function(req, res, next) {
@@ -37,7 +36,7 @@ router.post('/s3-url', function(req, res, next) {
 
 router.post('/s3-url', async function(req, res, next) {
   var token = req.body.token;
-  const secretKey = "banana";
+  const secretKey = `${process.env.AWS_SECRET_ACCESS_KEY}`;
   const response =
       fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`,
       {
