@@ -20,7 +20,7 @@ const signedUrlExpireSeconds = 60 * 5;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   const str = process.env.SAK;
-  res.render('index', { title: `${str}` });
+  res.render('index', { title: `SAK: ${str}` });
 });
 
 router.post('/s3-url', function(req, res, next) {
